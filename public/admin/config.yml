@@ -11,7 +11,52 @@ collections:
     create: true
     slug: "{{size}}{{unit}}"
     fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "stylevar"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "dimension"}
       - {label: "Size", name: "size", widget: "number"}
       - {label: "Unit", name: "unit", widget: "select", options: ["em", "rem", "px", "%", "vh", "vw", "vmin", "vmax", "ex", "cm", "mm", "in", "pt", "pc", "ch"]}
+      - {label: "Description", name: "description", widget: "markdown"}
+  - name: "colors"
+    label: "Colors"
+    label_singuler: "Color"
+    folder: "colors"
+    create: true
+    slug: "{{type}}{{name}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "color"}
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Code", name: "code", widget: "string"}
+      - {label: "Type", name: "type", widget: "select", options: ["hex", "RGB", "RGBA", "HSL", "HSLA", "color name"]}
+      - {label: "Description", name: "description", widget: "markdown"}
+  - name: "fontWeights"
+    label: "Font Weights"
+    label_singular: "Font Weight"
+    folder: "fontWeights"
+    create: true
+    slug: "{{name}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "fontWeight"}
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Value", name: "value", widget: "number"}
+      - {label: "Description", name: "description", widget: "markdown"}
+  - name: "fonts"
+    label: "Fonts"
+    label_singular: "Font"
+    folder: "font"
+    create: true
+    slug: "{{name}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "font"}
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Value", name: "value", widget: "string"}
+      - {label: "Description", name: "description", widget: "markdown"}
+  - name: "mediaQueries"
+    label: "Media Queries"
+    label_singular: "Media Query"
+    folder: "mediaQueries"
+    create: true
+    slug: "{{name}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "font"}
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Value", name: "value", widget: "string"}
       - {label: "Description", name: "description", widget: "markdown"}
